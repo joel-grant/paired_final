@@ -16,9 +16,7 @@ class Park
   end
 
   def revenue
-    num_adults = list_passengers.count do |passenger|
-      passenger.adult?
-    end
+    num_adults = list_passengers.count { |passenger| passenger.adult? }
     num_adults * @price
   end
 end
