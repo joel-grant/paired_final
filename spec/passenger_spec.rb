@@ -29,6 +29,11 @@ describe Passenger do
   describe '#driver?' do
     it 'returns a boolean response if the passenger is the driver' do
       expect(@charlie.driver?).to be false
+    end
+  end
+
+  describe '#drive' do
+    it 'switches the passengers status to be a driver' do
       @charlie.drive
       expect(@charlie.driver?).to be true
     end
