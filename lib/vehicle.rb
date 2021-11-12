@@ -22,6 +22,7 @@ class Vehicle
   end
 
   def num_adults
+    require 'pry'; binding.pry
     @passengers.count { |passenger| passenger.adult? }
   end
 end

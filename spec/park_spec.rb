@@ -39,7 +39,7 @@ describe Park do
       @vehicle_2.add_passenger(@joel)
       @park.admit(@vehicle_1)
       @park.admit(@vehicle_2)
-      expect(@park.vehicles).to eq([@vehicle_1, @vehicle_2)
+      expect(@park.vehicles).to eq([@vehicle_1, @vehicle_2])
     end
   end
 
@@ -63,6 +63,7 @@ describe Park do
       @vehicle_2.add_passenger(@joel)
       @park.admit(@vehicle_1)
       @park.admit(@vehicle_2)
-      expect(@park.revenue).to eq(28)
+      expect(@park.revenue).to eq(21)
     end
   end
+end
