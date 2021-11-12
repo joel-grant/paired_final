@@ -22,8 +22,6 @@ class Vehicle
   end
 
   def num_adults
-    adults = @passengers.count do |passenger|
-      passenger.age >= 18
-    end
+    @passengers.count { |passenger| passenger.adult? }
   end
 end
