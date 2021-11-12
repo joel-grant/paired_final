@@ -39,7 +39,7 @@ describe Vehicle do
 
   describe '#speed' do
     it 'sets the speeding variable to true' do
-      vehicle.speed
+      @vehicle.speed
       expect(@vehicle.speeding?).to be true
     end
   end
@@ -55,6 +55,9 @@ describe Vehicle do
 
   describe '#num_adults' do
     it 'returns an integer' do
+      @vehicle.add_passenger(@charlie)
+      @vehicle.add_passenger(@jude)
+      @vehicle.add_passenger(@taylor)
       expect(@vehicle.num_adults).to be_a Integer
     end
 
