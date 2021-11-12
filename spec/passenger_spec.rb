@@ -1,6 +1,6 @@
 require './lib/passenger'
 
-describe Pasenger do
+describe Passenger do
   before(:each) do
     @charlie = Passenger.new({"name" => "Charlie", "age" => 18})
     @taylor = Passenger.new({"name" => "Taylor", "age" => 12})
@@ -22,15 +22,15 @@ describe Pasenger do
 
   describe '#adult?' do
     it 'returns a boolean response if the passenger is an adult' do
-      expect(@charlie.adult?).to be True
+      expect(@charlie.adult?).to be true
     end
   end
 
   describe '#driver?' do
     it 'returns a boolean response if the passenger is the driver' do
-      expect(@charlie.driver?).to be False
+      expect(@charlie.driver?).to be false
       @charlie.drive
-      expect(@charlie.driver?).to be True
+      expect(@charlie.driver?).to be true
     end
-  end 
+  end
 end
